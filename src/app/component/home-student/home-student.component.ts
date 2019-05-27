@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CompanyStudentEventRelationServiceService } from 'src/app/services/company-student-event-relation-service.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home-student',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeStudentComponent implements OnInit {
 
-  constructor() { }
+  idUser: string;
+  dataSource;
+  displayedColumns: string[] = ['company', 'emailCompany', 'event', 'date'];
+
+  constructor(private route: ActivatedRoute,
+    private relationService: CompanyStudentEventRelationServiceService) {
+    this.route.queryParams.subscribe(params => {
+      this.idUser = params['idUser'];
+    })
+  }
 
   ngOnInit() {
   }

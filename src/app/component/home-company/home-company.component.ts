@@ -34,7 +34,6 @@ export class HomeCompanyComponent implements OnInit {
         relations.push(relationTable);
       });
       this.dataSource = relations;
-      console.log(this.dataSource);
     });
   }
 }
