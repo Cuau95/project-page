@@ -14,4 +14,9 @@ export class CompanyStudentEventRelationServiceService {
     return this.httpClient.get<CompanyStudentEventRelation[]>(apiURL);
   }
 
+  public getRelationByStudentId (idStudent: string) {
+    let apiURL = 'http://localhost:8080/student-company-event-relation/student/' + idStudent;
+    return this.httpClient.get<CompanyStudentEventRelation[]>(apiURL);
+  }
+
 }

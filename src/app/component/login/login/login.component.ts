@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     if(this.user.startsWith('USU')){
       this.serviceLogin.passwordCheckStudent(this.user, this.password).subscribe((res) => {
         if(res.passwordResponse === 'pass'){
-          this.router.navigate(['/home-student'])
+          this.router.navigate(['/home-student'], { queryParams: { idUser: this.user } })
         }
       });
     } else {

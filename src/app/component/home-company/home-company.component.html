@@ -1,3 +1,4 @@
+<h1>Bienvenido {{name}}</h1>
 <h2>Alumnos relacionados con su empresa</h2>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -17,7 +18,7 @@
   </ng-container>
 
   <ng-container matColumnDef="event">
-    <th mat-header-cell *matHeaderCellDef> Feria Empleo </th>
+    <th mat-header-cell *matHeaderCellDef> Evento de Relacion </th>
     <td mat-cell *matCellDef="let element"> {{element.event}} </td>
   </ng-container>
 
@@ -29,3 +30,8 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+<br>
+<div>
+  <button mat-button (click)="checkPassword()">Proximos Eventos</button>
+  <button mat-button (click)="checkPassword()">Editar Perfil</button>
+</div>

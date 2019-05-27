@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HomeCompanyComponent } from './component/home-company/home-company.component';
 import { HomeStudentComponent } from './component/home-student/home-student.component';
+import { EventListComponent } from './component/event-list/event-list.component';
+import { CompanyProfileComponent } from './component/company-profile/company-profile.component';
+import { StudentProfileComponent } from './component/student-profile/student-profile.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { HomeStudentComponent } from './component/home-student/home-student.comp
     LoginComponent,
     MyNavComponent,
     HomeCompanyComponent,
-    HomeStudentComponent
+    HomeStudentComponent,
+    EventListComponent,
+    CompanyProfileComponent,
+    StudentProfileComponent
   ],
   imports: [
     BrowserModule,

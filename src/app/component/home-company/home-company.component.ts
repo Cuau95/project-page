@@ -11,6 +11,7 @@ import { CompanyHomeTable } from 'src/app/model/company-home-table';
 export class HomeCompanyComponent implements OnInit {
 
   idUser: string;
+  name: string;
   dataSource;
   displayedColumns: string[] = ['student', 'campus', 'career', 'event', 'date'];
 
@@ -26,6 +27,7 @@ export class HomeCompanyComponent implements OnInit {
     let relations: CompanyHomeTable[] = new Array();
     this.relationService.getRelationByCompany(this.idUser).subscribe((res) => {
       res.forEach(relation => {
+        this.name = relation.empresa.nombreEmpresa;
         relationTable.student = relation.alumno.nombreCompleto;
         relationTable.campus = relation.alumno.campus.nombreEscuela;
         relationTable.career = relation.alumno.career.nombreCarrera;
