@@ -12,6 +12,11 @@
     <td mat-cell *matCellDef="let element"> {{element.emailCompany}} </td>
   </ng-container>
 
+  <ng-container matColumnDef="numberPhone">
+    <th mat-header-cell *matHeaderCellDef> Telefono Empresa </th>
+    <td mat-cell *matCellDef="let element"> {{element.companyPhone}} </td>
+  </ng-container>
+
   <ng-container matColumnDef="event">
     <th mat-header-cell *matHeaderCellDef> Evento de Relacion </th>
     <td mat-cell *matCellDef="let element"> {{element.event}} </td>

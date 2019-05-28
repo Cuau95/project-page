@@ -13,7 +13,7 @@ export class HomeStudentComponent implements OnInit {
   idUser: string;
   name: string;
   dataSource;
-  displayedColumns: string[] = ['company', 'emailCompany', 'event', 'date'];
+  displayedColumns: string[] = ['company', 'emailCompany', 'numberPhone','event', 'date'];
 
   constructor(private route: ActivatedRoute,
     private relationService: CompanyStudentEventRelationServiceService,
@@ -33,6 +33,7 @@ export class HomeStudentComponent implements OnInit {
         relationTable.emailCompany = relation.empresa.correo;
         relationTable.event = relation.feriaEmpleo.nombreFeria;
         relationTable.date = relation.fecha;
+        relationTable.companyPhone = relation.empresa.telefono;
         relations.push(relationTable);
       });
       this.dataSource = relations;
