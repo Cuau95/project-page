@@ -29,6 +29,7 @@ export class HomeCompanyComponent implements OnInit {
     this.relationService.getRelationByCompany(this.idUser).subscribe((res) => {
       res.forEach(relation => {
         this.name = relation.empresa.nombreEmpresa;
+        relationTable.idStudent = relation.alumno.id;
         relationTable.student = relation.alumno.nombreCompleto;
         relationTable.campus = relation.alumno.campus.nombreEscuela;
         relationTable.career = relation.alumno.career.nombreCarrera;
@@ -37,11 +38,12 @@ export class HomeCompanyComponent implements OnInit {
         relations.push(relationTable);
       });
       this.dataSource = relations;
+      console.log(this.dataSource);
     });
   }
 
   public goToEventList() {
-    this.router.navigate(['/event-list']);
+    this.router.navigate(['/event-list'], { queryParams: { idUser: this.idUser } });
   }
 
 }

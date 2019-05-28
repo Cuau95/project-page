@@ -1,0 +1,11 @@
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Id del Alumno" [(ngModel)]="user">
+  </mat-form-field>
+</div>
+<div>
+  <button mat-button (click)="linkWithIdNFC()">Vincular con NFC</button>
+</div>
+<div>
+  {{message}}
+</div>

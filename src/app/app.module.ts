@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ɵRender3NgModuleRef } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,9 @@ import { HomeStudentComponent } from './component/home-student/home-student.comp
 import { EventListComponent } from './component/event-list/event-list.component';
 import { CompanyProfileComponent } from './component/company-profile/company-profile.component';
 import { StudentProfileComponent } from './component/student-profile/student-profile.component';
+import { ContactStudentComponent } from './component/home-student/contact-student/contact-student.component';
+import { LinkerStudentNfcComponent } from './component/linker-student-nfc/linker-student-nfc.component';
+import { StudentNfcRelationComponent } from './component/student-nfc-relation/student-nfc-relation.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { StudentProfileComponent } from './component/student-profile/student-pro
     HomeStudentComponent,
     EventListComponent,
     CompanyProfileComponent,
-    StudentProfileComponent
+    StudentProfileComponent,
+    ContactStudentComponent,
+    LinkerStudentNfcComponent,
+    StudentNfcRelationComponent
   ],
   imports: [
     BrowserModule,

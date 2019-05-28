@@ -4,7 +4,13 @@
 
   <ng-container matColumnDef="student">
     <th mat-header-cell *matHeaderCellDef> Alumno </th>
-    <td mat-cell *matCellDef="let element"> {{element.student}} </td>
+    <td mat-cell *matCellDef="let element">
+      <a [href]=
+      "'http://localhost:4200/contact-student?idUser=EMP_1NEAR&student=' 
+      + element.idStudent + '&studentName=' + element.student">
+        {{element.student}}
+      </a>
+    </td>
   </ng-container>
 
   <ng-container matColumnDef="campus">

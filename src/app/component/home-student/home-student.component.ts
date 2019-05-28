@@ -13,11 +13,12 @@ export class HomeStudentComponent implements OnInit {
   idUser: string;
   name: string;
   dataSource;
-  displayedColumns: string[] = ['company', 'emailCompany', 'numberPhone','event', 'date'];
+  displayedColumns: string[] = ['company', 'emailCompany', 'numberPhone', 'event', 'date'];
 
   constructor(private route: ActivatedRoute,
     private relationService: CompanyStudentEventRelationServiceService,
-    private router: Router) {
+    private router: Router
+    ) {
     this.route.queryParams.subscribe(params => {
       this.idUser = params['idUser'];
     })
@@ -41,7 +42,7 @@ export class HomeStudentComponent implements OnInit {
   }
 
   public goToEventList() {
-    this.router.navigate(['/event-list']);
+    this.router.navigate(['/event-list'], { queryParams: { idUser: this.idUser } });
   }
 
 }
