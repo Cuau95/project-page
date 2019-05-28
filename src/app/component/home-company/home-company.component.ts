@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CompanyStudentEventRelationServiceService } from 'src/app/services/company-student-event-relation-service.service';
 import { CompanyHomeTable } from 'src/app/model/company-home-table';
 
@@ -16,7 +16,8 @@ export class HomeCompanyComponent implements OnInit {
   displayedColumns: string[] = ['student', 'campus', 'career', 'event', 'date'];
 
   constructor(private route: ActivatedRoute,
-    private relationService: CompanyStudentEventRelationServiceService) {
+    private relationService: CompanyStudentEventRelationServiceService,
+    private router: Router) {
     this.route.queryParams.subscribe(params => {
       this.idUser = params['idUser'];
     })
@@ -38,5 +39,10 @@ export class HomeCompanyComponent implements OnInit {
       this.dataSource = relations;
     });
   }
+
+  public goToEventList() {
+    this.router.navigate(['/event-list']);
+  }
+
 }
 
