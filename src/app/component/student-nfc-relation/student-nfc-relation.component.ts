@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LinkerStudentNfcService } from 'src/app/services/linker-student-nfc.service';
 
 @Component({
   selector: 'app-student-nfc-relation',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentNfcRelationComponent implements OnInit {
 
-  constructor() { }
+  dataSource;
+  displayedColumns: string[] = ['idNFC', 'student'];
+
+  constructor(private service: LinkerStudentNfcService) { }
 
   ngOnInit() {
+    this.updateDataSource();
+  }
+
+  updateDataSource() {
+    this.service.fetchAllRelations().subscribe((res) => {
+      this.dataSource = res;
+    });
   }
 
 }

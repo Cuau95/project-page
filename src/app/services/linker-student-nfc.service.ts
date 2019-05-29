@@ -19,7 +19,7 @@ export class LinkerStudentNfcService {
   }
 
   public fetchAllRelations() {
-    let apiURL: string = 'localhost:8086/student-nfc-relation/relation';
+    let apiURL: string = 'http://localhost:8086/student-nfc-relation/relation';
     return this.httpClient.get<StudentNfcRelation[]>(apiURL);
   }
 

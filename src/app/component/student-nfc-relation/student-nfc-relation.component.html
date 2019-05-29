@@ -1,3 +1,21 @@
-<p>
-  student-nfc-relation works!
-</p>
+<h1>Relación Alumnos NFC</h1>
+<br>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="idNFC">
+    <th mat-header-cell *matHeaderCellDef> NFC Number </th>
+    <td mat-cell *matCellDef="let element"> {{element.idNfc}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="student">
+    <th mat-header-cell *matHeaderCellDef> Alumno </th>
+    <td mat-cell *matCellDef="let element"> {{element.alumno.nombreCompleto}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<br>
+<div>
+  <button mat-button (click)="updateDataSource()">Actualizar</button>
+</div>
