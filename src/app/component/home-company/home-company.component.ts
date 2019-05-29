@@ -46,5 +46,9 @@ export class HomeCompanyComponent implements OnInit {
     this.router.navigate(['/event-list'], { queryParams: { idUser: this.idUser } });
   }
 
+  public goToEditProfile() {
+    this.router.navigate(['/edit-company-profile'], { queryParams: { idUser: this.idUser } })
+  }
+
 }
 

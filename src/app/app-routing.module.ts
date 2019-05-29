@@ -7,6 +7,7 @@ import { EventListComponent } from './component/event-list/event-list.component'
 import { ContactStudentComponent } from './component/home-student/contact-student/contact-student.component';
 import { LinkerStudentNfcComponent } from './component/linker-student-nfc/linker-student-nfc.component';
 import { StudentNfcRelationComponent } from './component/student-nfc-relation/student-nfc-relation.component';
+import { CompanyProfileComponent } from './component/company-profile/company-profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'event-list', component: EventListComponent },
   { path: 'contact-student', component: ContactStudentComponent },
   { path: 'linker-student-nfc', component: LinkerStudentNfcComponent },
-  { path: 'relation-student-nfc', component: StudentNfcRelationComponent }
+  { path: 'relation-student-nfc', component: StudentNfcRelationComponent },
+  { path: 'edit-company-profile', component: CompanyProfileComponent }
 ];
 
 @NgModule({

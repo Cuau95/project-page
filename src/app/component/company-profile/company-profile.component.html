@@ -1,3 +1,41 @@
-<p>
-  company-profile works!
-</p>
+<div class="example-container">
+  {{message}}
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Nombre Empresa" [(ngModel)]="user.nombreEmpresa">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput placeholder="Telefono" [(ngModel)]="user.telefono">
+  </mat-form-field>
+  <br>
+    
+  <mat-form-field>
+    <input matInput placeholder="Direcion" [(ngModel)]="user.direcion">
+  </mat-form-field>
+  <br>
+    
+  <mat-form-field>
+    <input matInput placeholder="Colonia" [(ngModel)]="user.colonia">
+  </mat-form-field>
+  <br>
+    
+  <mat-form-field>
+    <input matInput placeholder="Delegacion" [(ngModel)]="user.delegacion">
+  </mat-form-field>
+  <br>  
+
+  <mat-form-field>
+    <input matInput placeholder="Correo" [(ngModel)]="user.correo">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput placeholder="Password" [(ngModel)]="user.password">
+  </mat-form-field>
+  <br> 
+  <button mat-button (click)="updateCompany()">Completar Cambios</button>
+  <button mat-button (click)="backToHomeCompany()">Cancelar</button>
+  <button mat-button (click)="backToHomeCompany()">Regresar</button>
+</div>
