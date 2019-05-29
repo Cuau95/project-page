@@ -13,6 +13,11 @@ export class ContactStudentService {
   public fetchContactStudentRecords(idStudent: string) {
     let apiURL: string = 'http://localhost:8085/student/contacto/boleta/' + idStudent;
     return this.httpClient.get<ContactStudent>(apiURL);
-  } 
+  }
+
+  public updateContactStudent(idStudent: string, contactUpdeted: ContactStudent) {
+    let apiURL: string = 'http://localhost:8085/student/contacto/id/' + idStudent;
+    return this.httpClient.post<ContactStudent>(apiURL, contactUpdeted);
+  }
 
 }

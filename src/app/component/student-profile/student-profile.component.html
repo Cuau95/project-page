@@ -1,3 +1,76 @@
-<p>
-  student-profile works!
-</p>
+<div class="example-container">
+  <h1>Información General Del Alumno</h1>
+  <h3>{{message}}</h3>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Nombre Alumno" [(ngModel)]="user.nombreAlumno">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput placeholder="Apellido Paterno" [(ngModel)]="user.pApellido">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput placeholder="Apellido Matermo" [(ngModel)]="user.mApellido">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput placeholder="Password" [(ngModel)]="user.password">
+  </mat-form-field>
+  <br>
+
+  <h3>Carrera:</h3>
+
+  <mat-form-field>
+    <input matInput placeholder="Delegacion" [(ngModel)]="user.career.nombreCarrera">
+  </mat-form-field>
+  <br>
+
+  <h3>Escuela:</h3>
+
+  <mat-form-field>
+    <input matInput placeholder="Correo" [(ngModel)]="user.campus.nombreEscuela">
+  </mat-form-field>
+  <br>
+
+  <button mat-button (click)="updateStudent()">Completar Cambios</button>
+  <h3>{{message}}</h3>
+</div>
+
+<div class="example-container">
+  <h2>Información de Contacto</h2>
+  <h3>{{messageContact}}</h3>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="Dirección" [(ngModel)]="userContact.direccion">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput placeholder="Colonia" [(ngModel)]="userContact.colonia">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput placeholder="Delegación" [(ngModel)]="userContact.delegacion">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput placeholder="E-Mail" [(ngModel)]="userContact.correo">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <input matInput placeholder="Telefono" [(ngModel)]="userContact.telefono">
+  </mat-form-field>
+  <br>
+
+  <button mat-button (click)="updateContactStudent()">Completar Cambios</button>
+  <h3>{{messageContact}}</h3>
+  <button mat-button (click)="backToHomeStudent()">Cancelar</button>
+  <button mat-button (click)="backToHomeStudent()">Regresar</button>
+</div>

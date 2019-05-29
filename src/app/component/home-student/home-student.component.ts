@@ -45,4 +45,8 @@ export class HomeStudentComponent implements OnInit {
     this.router.navigate(['/event-list'], { queryParams: { idUser: this.idUser } });
   }
 
+  public goToStudentEditProfile() {
+    this.router.navigate(['/edit-student-profile'], { queryParams: { idUser: this.idUser } })
+  }
+
 }
